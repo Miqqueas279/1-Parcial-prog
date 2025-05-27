@@ -12,6 +12,7 @@ def cargar_pacientes():
     print("Pacientes cargados exitosamente.")
 
 def mostrar_pacientes():
+        """Imprime todos los pacientes registrados."""
     if not pacientes:
         print("No hay pacientes registrados.")
     else:
@@ -21,6 +22,7 @@ def mostrar_pacientes():
     input("\nPresiona ENTER para volver al menú...")
 
 def buscar_paciente(num_historia):
+    """Busca un paciente por número de historia clínica."""
     encontrado = False
     for paciente in pacientes:
         if paciente[0] == num_historia:
@@ -31,6 +33,7 @@ def buscar_paciente(num_historia):
         print("Paciente no encontrado.")
 
 def ordenar_pacientes():
+     """Ordena los pacientes por número de historia clínica usando el método de burbuja."""
     if not pacientes:
         print(" No hay pacientes registrados.")
         return
@@ -51,6 +54,7 @@ def ordenar_pacientes():
         print(f"Historia Clínica: {p[0]} - Nombre: {p[1]} - Edad: {p[2]} - Diagnóstico: {p[3]} - Días internados: {p[4]}")
 
 def paciente_con_mas_dias():
+    """Encuentra el paciente con más días de internación."""
     if not pacientes:
         print("No hay pacientes registrados.")
         return
@@ -61,6 +65,7 @@ def paciente_con_mas_dias():
     print(f"Paciente con más días de internación: {paciente_max}")
 
 def paciente_con_menos_dias():
+    """Encuentra el paciente con menos días de internación."""
     if not pacientes:
         print("No hay pacientes registrados.")
         return
@@ -71,6 +76,7 @@ def paciente_con_menos_dias():
     print(f"Paciente con menos días de internación: {paciente_min}")
 
 def cantidad_pacientes_mas_de_5_dias():
+        """Cuenta los pacientes con más de 5 días de internación."""
     if not pacientes:
         print("No hay pacientes registrados.")
         return
@@ -81,6 +87,7 @@ def cantidad_pacientes_mas_de_5_dias():
     print(f"Cantidad de pacientes con más de 5 días de internación: {cantidad}")
 
 def promedio_dias_internacion():
+        """Calcula el promedio de días de internación."""
     if not pacientes:
         print("No hay pacientes registrados.")
         return
@@ -91,7 +98,7 @@ def promedio_dias_internacion():
     print(f"Promedio de días de internación: {promedio:.2f}")
 
 def menu():
-
+"""Menú interactivo del sistema de gestión de clínica."""
     while True:
         print("\nSistema de Gestión de Clínica")
         print("1. Cargar pacientes")
